@@ -6,13 +6,38 @@
 [mutation.js](https://github.com/josecis0216/GraphQL-API-Node-Server/blob/master/src/mutation.js)
 ## At least 2 Mutation resolvers allowing users to create, update, or upsert an item.
 [mutation.js](https://github.com/josecis0216/GraphQL-API-Node-Server/blob/master/src/mutation.js)
+mutation createPlayer {
+  createPlayer(name:"Neymar Jr", 
+    position:"Attacker",
+  dob:"1989-28-11",
+  nationality:"Brazil",
+  currentTeam:"Paris Saint Germain",
+  jerseyNumber:"11") {
+    name
+    currentTeam
+    jerseyNumber
+  }
+}
+mutation updatePlayer {
+  updatePlayer(id:"*playerid*",
+  currentTeam:"Piemonte Calcio") {
+    id 
+    name
+    currentTeam
+  }
+}
 ## At least 1 Mutation resolver allowing users to delete an item.
 [mutation.js](https://github.com/josecis0216/GraphQL-API-Node-Server/blob/master/src/mutation.js)
+mutation deletePlayer {
+    deletePlayer(id:"*playerid*") {
+        name
+    }
+}
 ## Your datastore will contain at least 25 items
 [players.json](https://github.com/josecis0216/GraphQL-API-Node-Server/blob/master/prisma/example_files/players.json)
 ## Your app will be deployable locally using Docker and will have seed data entered into the datastore.
 [seed.js](https://github.com/josecis0216/GraphQL-API-Node-Server/blob/master/prisma/seed.js)
-## ll of your source code will be properly uploaded to GitHub
+## All of your source code will be properly uploaded to GitHub
 [Github](https://github.com/josecis0216/GraphQL-API-Node-Server)
 ## Your ReadMe file will accurately describe your server install and run process and how to use the APIs
 1. npm run launchDocker
