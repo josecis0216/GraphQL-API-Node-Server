@@ -46,35 +46,6 @@ function loadUVUCourses() {
   })
 }
 
-/* async function createCourse() {
-  try {
-    await prismaClient.course.create({
-      data: {
-        name: 'Rich Internet Applications II',
-        description:
-          'Most useful DGM course ever created.  Taught by the most brilliant yet humble professor to ever grace the hallways of UVU.',
-        defaultCredits: '3',
-        courseCode: 'DGM 4790',
-        termsOffered: 'Spring',
-      },
-    })
-  } catch (err) {
-    console.log(err)
-  }
-} */
-
-// async function main() {
-//   try {
-//     const allCourses = loadUVUCourses()
-//     for (let crs of allCourses) {
-//       await prismaClient.course.create(crs)
-//       .catch(err => console.log(`Error trying to create UVU courses: ${err} course ${crs}`))
-//     }
-//   } catch (err) {
-//     console.log(err)
-//   }
-// }
-
 async function main() {
   try {
     const allPlayers = loadPlayers()
