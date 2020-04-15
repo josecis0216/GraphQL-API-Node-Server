@@ -1,6 +1,6 @@
 datasource db {
   provider = "postgresql"
-  url      = "process.env.DB_CONNECT_URL"
+  url      = env("DB_CONNECT_URL")
 }
 
 generator client {
