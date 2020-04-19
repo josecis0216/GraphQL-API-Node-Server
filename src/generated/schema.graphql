@@ -17,7 +17,6 @@ scalar DateTime
 
 type Mutation {
   createPlayer(currentTeam: String, dob: String, jerseyNumber: String, name: String!, nationality: String, position: String!): Player!
-  deleteOnePlayer(where: PlayerWhereUniqueInput!): Player
   updatePlayer(currentTeam: String, id: ID, jerseyNumber: String, name: String, position: String): Player!
 }
 
@@ -31,10 +30,6 @@ type Player {
   nationality: String!
   position: String!
   updatedAt: DateTime!
-}
-
-input PlayerWhereUniqueInput {
-  id: String
 }
 
 type Query {

@@ -4,7 +4,9 @@ export const Mutation = mutationType({
     name: 'Mutation',
     definition(t) {
 
-        t.crud.deleteOnePlayer()
+        // t.crud.deleteOnePlayer()
+        // t.crud.updateOnePlayer()
+        // t.crud.createOnePlayer()
 
 
         t.field('createPlayer', {

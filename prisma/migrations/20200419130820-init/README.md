@@ -1,6 +1,6 @@
-# Migration `20200414195403-init`
+# Migration `20200419130820-init`
 
-This migration has been generated at 4/14/2020, 7:54:03 PM.
+This migration has been generated at 4/19/2020, 1:08:20 PM.
 You can check out the [state of the schema](./schema.prisma) after the migration.
 
 ## Database Steps
@@ -36,7 +36,7 @@ CREATE TABLE "public"."Player" (
 
 ```diff
 diff --git schema.prisma schema.prisma
-migration ..20200414195403-init
+migration ..20200419130820-init
 --- datamodel.dml
 +++ datamodel.dml
 @@ -1,0 +1,31 @@
