@@ -11,7 +11,7 @@ export const Query = queryType({
         return ctx.prisma.player.findOne({
           where: {
             id,
-          },
+          }
         })
       }
     })
