@@ -25,7 +25,6 @@ export interface NexusGenEnums {
 }
 
 export interface NexusGenRootTypes {
-  Course: prisma.Course;
   Mutation: {};
   Player: prisma.Player;
   Query: {};
@@ -41,16 +40,6 @@ export interface NexusGenAllTypes extends NexusGenRootTypes {
 }
 
 export interface NexusGenFieldTypes {
-  Course: { // field return type
-    courseCode: string; // String!
-    createdAt: any; // DateTime!
-    defaultCredits: string; // String!
-    description: string; // String!
-    id: string; // String!
-    name: string; // String!
-    termsOffered: string; // String!
-    updatedAt: any; // DateTime!
-  }
   Mutation: { // field return type
     createPlayer: NexusGenRootTypes['Player']; // Player!
     updatePlayer: NexusGenRootTypes['Player']; // Player!
@@ -105,7 +94,7 @@ export interface NexusGenAbstractResolveReturnTypes {
 
 export interface NexusGenInheritedFields {}
 
-export type NexusGenObjectNames = "Course" | "Mutation" | "Player" | "Query";
+export type NexusGenObjectNames = "Mutation" | "Player" | "Query";
 
 export type NexusGenInputNames = never;
 

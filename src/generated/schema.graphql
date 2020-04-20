@@ -2,17 +2,6 @@
 ### Do not make changes to this file directly
 
 
-type Course {
-  courseCode: String!
-  createdAt: DateTime!
-  defaultCredits: String!
-  description: String!
-  id: String!
-  name: String!
-  termsOffered: String!
-  updatedAt: DateTime!
-}
-
 scalar DateTime
 
 type Mutation {
