@@ -19,6 +19,31 @@ declare global {
 }
 
 export interface NexusGenInputs {
+  PlayerCreateInput: { // input type
+    createdAt?: any | null; // DateTime
+    currentTeam: string; // String!
+    dob: string; // String!
+    id?: string | null; // String
+    jerseyNumber: string; // String!
+    name: string; // String!
+    nationality: string; // String!
+    position: string; // String!
+    updatedAt?: any | null; // DateTime
+  }
+  PlayerUpdateInput: { // input type
+    createdAt?: any | null; // DateTime
+    currentTeam?: string | null; // String
+    dob?: string | null; // String
+    id?: string | null; // String
+    jerseyNumber?: string | null; // String
+    name?: string | null; // String
+    nationality?: string | null; // String
+    position?: string | null; // String
+    updatedAt?: any | null; // DateTime
+  }
+  PlayerWhereUniqueInput: { // input type
+    id?: string | null; // String
+  }
 }
 
 export interface NexusGenEnums {
@@ -37,12 +62,16 @@ export interface NexusGenRootTypes {
 }
 
 export interface NexusGenAllTypes extends NexusGenRootTypes {
+  PlayerCreateInput: NexusGenInputs['PlayerCreateInput'];
+  PlayerUpdateInput: NexusGenInputs['PlayerUpdateInput'];
+  PlayerWhereUniqueInput: NexusGenInputs['PlayerWhereUniqueInput'];
 }
 
 export interface NexusGenFieldTypes {
   Mutation: { // field return type
-    createPlayer: NexusGenRootTypes['Player']; // Player!
-    updatePlayer: NexusGenRootTypes['Player']; // Player!
+    createOnePlayer: NexusGenRootTypes['Player']; // Player!
+    deleteOnePlayer: NexusGenRootTypes['Player'] | null; // Player
+    updateOnePlayer: NexusGenRootTypes['Player'] | null; // Player
   }
   Player: { // field return type
     createdAt: any; // DateTime!
@@ -63,20 +92,15 @@ export interface NexusGenFieldTypes {
 
 export interface NexusGenArgTypes {
   Mutation: {
-    createPlayer: { // args
-      currentTeam?: string | null; // String
-      dob?: string | null; // String
-      jerseyNumber?: string | null; // String
-      name: string; // String!
-      nationality?: string | null; // String
-      position: string; // String!
+    createOnePlayer: { // args
+      data: NexusGenInputs['PlayerCreateInput']; // PlayerCreateInput!
     }
-    updatePlayer: { // args
-      currentTeam?: string | null; // String
-      id?: string | null; // ID
-      jerseyNumber?: string | null; // String
-      name?: string | null; // String
-      position?: string | null; // String
+    deleteOnePlayer: { // args
+      where: NexusGenInputs['PlayerWhereUniqueInput']; // PlayerWhereUniqueInput!
+    }
+    updateOnePlayer: { // args
+      data: NexusGenInputs['PlayerUpdateInput']; // PlayerUpdateInput!
+      where: NexusGenInputs['PlayerWhereUniqueInput']; // PlayerWhereUniqueInput!
     }
   }
   Query: {
@@ -96,7 +120,7 @@ export interface NexusGenInheritedFields {}
 
 export type NexusGenObjectNames = "Mutation" | "Player" | "Query";
 
-export type NexusGenInputNames = never;
+export type NexusGenInputNames = "PlayerCreateInput" | "PlayerUpdateInput" | "PlayerWhereUniqueInput";
 
 export type NexusGenEnumNames = never;
 

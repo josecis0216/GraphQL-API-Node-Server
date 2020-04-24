@@ -7,7 +7,6 @@ const Player = objectType({
     t.model.createdAt()
     t.model.updatedAt()
     t.model.name()
-    t.model.first()
     t.model.position()
     t.model.dob()
     t.model.nationality()
