@@ -23,29 +23,6 @@ function loadPlayers() {
   })
 }
 
-function loadUVUCourses() {
-  const catalog = JSON.parse(uvu_courses)
-  const allCourses = catalog.comet.course
-  const dgmCourses = allCourses.filter(
-    course =>
-      course.prefix._text === 'DGM' ||
-      course.prefix._text === 'CS' ||
-      course.prefix._text === 'IT' ||
-      course.prefix._text === 'INFO',
-  )
-  return dgmCourses.map(crs => {
-    return {
-      data: {
-        name: crs.title._text,
-        description: crs.description._text,
-        defaultCredits: crs.totalCredits._text,
-        courseCode: `${crs.prefix._text} ${crs.number._text}`,
-        termsOffered: crs.termsOffered._text || "Fall",
-      },
-    }
-  })
-}
-
 async function main() {
   try {
     const allPlayers = loadPlayers()
