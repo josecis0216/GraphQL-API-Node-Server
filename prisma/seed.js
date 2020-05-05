@@ -3,7 +3,6 @@ import fs from 'fs'
 
 const prismaClient = new PrismaClient()
 
-const uvu_courses = fs.readFileSync('prisma/example_files/uvu_courses.json')
 const soccer_player = fs.readFileSync('prisma/example_files/players.json')
 
 function loadPlayers() {
