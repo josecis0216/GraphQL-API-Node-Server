@@ -1,6 +1,6 @@
-# Migration `20200505095858-init`
+# Migration `20201117212427-init`
 
-This migration has been generated at 5/5/2020, 9:58:58 AM.
+This migration has been generated at 11/17/2020, 9:24:27 PM.
 You can check out the [state of the schema](./schema.prisma) after the migration.
 
 ## Database Steps
@@ -24,13 +24,13 @@ CREATE TABLE "public"."Player" (
 
 ```diff
 diff --git schema.prisma schema.prisma
-migration ..20200505095858-init
+migration ..20201117212427-init
 --- datamodel.dml
 +++ datamodel.dml
 @@ -1,0 +1,20 @@
 +datasource db {
 +  provider = "postgresql"
-+  url      = env("DB_CONNECT_URL")
++  url      = "postgresql://postgres:docker@localhost:5432/prisma"
 +}
 +
 +generator client {

@@ -1,6 +1,7 @@
 import { ApolloServer } from 'apollo-server'
 import { schema } from './schema'
 import { createContext } from './context'
+// import { mongoConnect } from './database'
 import * as dotenv from 'dotenv'
 
 dotenv.config()
